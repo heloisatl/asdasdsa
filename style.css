@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+nav{
+    padding:5px;
+    margin-left: 1%;
+    margin: 2%;
+    padding: 0.3%;
+    font-size: 15px;
+    display: flex;
+
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    padding:0px 50px 10px 0px;
+    position:relative;
+}
+
+/* "::after" é um pseudoelemento, voce adiciona outro elemento depois do elemento "nav a", que no caso vai ser a "borda de baixo"
+content=" " para dizer que o conteúdo dessa nav é vazia*/
+nav a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+/*ease-in-out serve para que ele comece suave e termine suave*/
+ 
+nav a:hover::after{
+    width: 100%;
+}
+h1{
+    color: #ffffff;
+}
+p{
+    color: white;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #627348;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+button .spanContainer {
+    background: #627348;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.8s;
+    
+}
+
+button:hover .spanContainer {
+    width: 100%;
+}
+
+button:hover .spanContainer {
+    border: none;
+}
+
+body{
+    background-color: black;
+}
+
+body, html{
+    min-height: 100%;
+    margin: 0;
+}
+.bg{
+    background-image: url(imagens/MarcelaAzevedo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    background-attachment: fixed;
+    /* imagem nao vai rolar junto com a página */
+}
